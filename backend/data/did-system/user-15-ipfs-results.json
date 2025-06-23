@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "investorId": "user-15",
+    "step": "IPFS Upload Complete",
+    "version": "1.0.0",
+    "completedAt": "2025-06-22T16:35:35.867Z"
+  },
+  "walletAddresses": {
+    "bitcoin": {
+      "address": "tb1qs736wplzka7tyh487ptpc46gc77gflnwnjsska",
+      "chain": "bitcoin",
+      "network": "testnet",
+      "name": "Bitcoin Testnet",
+      "legacyAddress": null
+    },
+    "ethereum": {
+      "address": "0xcFeF44e8ceb88E90c710162570Bde5d1bB31B096",
+      "chain": "ethereum",
+      "network": "sepolia",
+      "name": "Ethereum Sepolia",
+      "legacyAddress": null
+    },
+    "solana": {
+      "address": "5AJEhVVyX9T6vUgVceoUhsBop4P2EdEUjvhf2gbyAKH5",
+      "chain": "solana",
+      "network": "devnet",
+      "name": "Solana Devnet",
+      "legacyAddress": null
+    }
+  },
+  "hashedData": {
+    "metadata": {
+      "investorId": "user-15",
+      "purpose": "Cross-chain investor identity verification",
+      "version": "1.0.0",
+      "hashAlgorithm": "sha256",
+      "createdAt": "2025-06-22T16:35:34.020Z",
+      "walletCount": 3,
+      "chains": [
+        "bitcoin",
+        "ethereum",
+        "solana"
+      ]
+    },
+    "walletHashes": {
+      "bitcoin": {
+        "originalAddress": "tb1qs736wplzka7tyh487ptpc46gc77gflnwnjsska",
+        "hashedAddress": "c9c3c570e7678d85b76eab54e12871e8560d11361b13eacd4899376dbf4fbebd",
+        "chain": "bitcoin",
+        "network": "testnet",
+        "name": "Bitcoin Testnet",
+        "hashAlgorithm": "sha256"
+      },
+      "ethereum": {
+        "originalAddress": "0xcFeF44e8ceb88E90c710162570Bde5d1bB31B096",
+        "hashedAddress": "e24fd0f57a904e50fc1e11aaee6d145b9a9cb7a95d734b79ede4c11d556ae0e9",
+        "chain": "ethereum",
+        "network": "sepolia",
+        "name": "Ethereum Sepolia",
+        "hashAlgorithm": "sha256"
+      },
+      "solana": {
+        "originalAddress": "5AJEhVVyX9T6vUgVceoUhsBop4P2EdEUjvhf2gbyAKH5",
+        "hashedAddress": "c5a93f24bbf0c3317786d65d5a77b9122ed2f4ff4f26d77edafe6aa9625f8a7f",
+        "chain": "solana",
+        "network": "devnet",
+        "name": "Solana Devnet",
+        "hashAlgorithm": "sha256"
+      }
+    },
+    "combinedHash": {
+      "hash": "48b3e9904f2539c659bfa6f068c1032df5e95f5ceffacdaa914a86204d75b03e",
+      "source": "bitcoin:tb1qs736wplzka7tyh487ptpc46gc77gflnwnjsska|ethereum:0xcFeF44e8ceb88E90c710162570Bde5d1bB31B096|solana:5AJEhVVyX9T6vUgVceoUhsBop4P2EdEUjvhf2gbyAKH5",
+      "algorithm": "sha256"
+    },
+    "verification": {
+      "instructions": "To verify wallet ownership, sign a challenge message with each wallet's private key",
+      "supportedChains": [
+        "bitcoin",
+        "ethereum",
+        "solana"
+      ],
+      "format": "W3C DID Document Service Entry"
+    }
+  },
+  "ipfsResult": {
+    "cid": "bafkreif2xdsp7c4vz3shgvzc2odghgfhh5mcx2w5fcodrhoznqu3kycq4u",
+    "ipfsUrl": "https://gateway.pinata.cloud/ipfs/bafkreif2xdsp7c4vz3shgvzc2odghgfhh5mcx2w5fcodrhoznqu3kycq4u",
+    "pinataUrl": "https://app.pinata.cloud/pinmanager?cid=bafkreif2xdsp7c4vz3shgvzc2odghgfhh5mcx2w5fcodrhoznqu3kycq4u",
+    "uploadTime": 563,
+    "pinSize": 1474,
+    "timestamp": "2025-06-22T16:35:34.499Z",
+    "uploadedAt": "2025-06-22T16:35:35.834Z"
+  },
+  "nextSteps": [
+    "Generate DID:KEY using DIDKit",
+    "Create DID Document with IPFS CID in service field",
+    "Issue Verifiable Credentials",
+    "Implement wallet ownership verification"
+  ]
+}

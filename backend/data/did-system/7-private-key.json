@@ -1,0 +1,13 @@
+{
+  "investorId": 7,
+  "did": "did:key:z6Mkiizv89hYkXKFLKy2fx1iAtHmR3zWUnL3a3zmKbrVAxcD",
+  "keyType": "Ed25519",
+  "privateKeyJWK": {
+    "kty": "OKP",
+    "crv": "Ed25519",
+    "x": "P3bvPQbNOiJXZeGRkW8Wjzng-6yauBuRdMx7_btF7v4",
+    "d": "h31xqSyu7bDCWiS0uc9tc6n5xNIamBq8t5y15JVczw8"
+  },
+  "createdAt": "2025-06-20T23:01:23.649Z",
+  "warning": "KEEP THIS FILE SECURE - Contains private key material"
+}

@@ -1,0 +1,112 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model users {
+  id       Int    @id @default(autoincrement())
+  name     String
+  email    String @unique
+  password String?
+   provider String  @default("local")
+  vault Vault? @relation("UserVault")
+   didMetadata  DIDMetadata[] 
+   kycData      KycData?
+   sbtCredentials SBTCredential[]
+}
+
+model Vault {
+  id      Int      @id @default(autoincrement())
+  userId  Int      @unique
+  user    users    @relation("UserVault", fields: [userId], references: [id])
+  wallets Wallet[]
+  fireblocksVaultId String 
+}
+
+model Wallet {
+  id        Int    @id @default(autoincrement())
+  address   String
+  assetId   String  
+  network   String
+  balance   Float   
+  vaultId   Int
+  vault     Vault   @relation(fields: [vaultId], references: [id])
+}
+model DIDMetadata {
+  id                    Int      @id @default(autoincrement())
+  // DID Document Info
+  did                   String
+  didDocumentCid        String
+  didDocumentUrl        String
+  keyType               String
+  verificationMethod    String
+  
+  // Consolidated Wallet IPFS Info
+  allWalletsCid         String
+  allWalletsUrl         String
+  walletCount           Int
+  chains                String   // JSON string array of supported chains
+  combinedHash          String   // Hash of all wallet addresses combined
+  txHash                String?
+  etherscanUrl          String?
+  
+  // Metadata
+  version               String   @default("2.0.0")
+  purpose               String   @default("multi-chain-wallet-verification")
+  investorId            String   // e.g., "user-15"
+  
+  // Timestamps
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+  
+  // Relations
+  user                  users    @relation(fields: [userId], references: [id])
+  userId                Int
+}
+
+model KycData {
+  id                    Int       @id @default(autoincrement())
+  
+  // Sumsub Integration
+  applicantId           String    @unique
+  status                String    // pending, completed, rejected, etc.
+  reviewResult          String?   // GREEN, RED, YELLOW
+  
+  // Personal Information (JSON)
+  personalInfo          String    @db.Text  // JSON string of personal details
+  documentsInfo         String    @db.Text  // JSON string of documents information
+  
+  // Raw Data Storage
+  rawApplicantData      String    @db.Text  // Complete raw applicant data from Sumsub
+  rawStatusData         String    @db.Text  // Complete raw status data from Sumsub
+  
+  // Timestamps
+  verifiedAt            DateTime?
+  createdAt             DateTime  @default(now())
+  updatedAt             DateTime  @updatedAt
+  
+  // Relations
+  user                  users     @relation(fields: [userId], references: [id])
+  userId                Int       @unique
+}
+
+model SBTCredential {
+  id            Int      @id @default(autoincrement())
+  imageCid      String
+  vcCid         String   @default("")
+  vcHash        String   @default("")
+  selectedImage String?  // image1, image2, image3
+  vcSigned      String?  @db.Text // JSON of signed VC
+  minted        Boolean  @default(false)
+  txHash        String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  // Relations
+  user     users @relation(fields: [userId], references: [id])
+  userId   Int
+}

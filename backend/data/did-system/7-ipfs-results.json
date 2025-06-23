@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "investorId": 7,
+    "step": "IPFS Upload Complete",
+    "version": "1.0.0",
+    "completedAt": "2025-06-21T01:34:07.319Z"
+  },
+  "walletAddresses": {
+    "bitcoin": {
+      "address": "tb1q3xnlvcnlkk7n78dmd9nkzfny577ny4k93pzzdr",
+      "chain": "bitcoin",
+      "network": "testnet",
+      "name": "Bitcoin Testnet",
+      "legacyAddress": null
+    },
+    "solana": {
+      "address": "2r8xp2N9BiWwjPuGPpyS46KESEtznBbufJqA3FSQiCdN",
+      "chain": "solana",
+      "network": "devnet",
+      "name": "Solana Devnet",
+      "legacyAddress": null
+    }
+  },
+  "hashedData": {
+    "metadata": {
+      "investorId": 7,
+      "purpose": "Cross-chain investor identity verification",
+      "version": "1.0.0",
+      "hashAlgorithm": "sha256",
+      "createdAt": "2025-06-21T01:34:03.373Z",
+      "walletCount": 0,
+      "chains": []
+    },
+    "walletHashes": {},
+    "combinedHash": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "",
+      "algorithm": "sha256"
+    },
+    "verification": {
+      "instructions": "To verify wallet ownership, sign a challenge message with each wallet's private key",
+      "supportedChains": [
+        "bitcoin",
+        "ethereum",
+        "solana"
+      ],
+      "format": "W3C DID Document Service Entry"
+    }
+  },
+  "ipfsResult": {
+    "cid": "bafkreibc5rsk3lz3dmcnt22y43u3zm7mtcribouzkkvxixek5fz6oa7rrq",
+    "ipfsUrl": "https://gateway.pinata.cloud/ipfs/bafkreibc5rsk3lz3dmcnt22y43u3zm7mtcribouzkkvxixek5fz6oa7rrq",
+    "pinataUrl": "https://app.pinata.cloud/pinmanager?cid=bafkreibc5rsk3lz3dmcnt22y43u3zm7mtcribouzkkvxixek5fz6oa7rrq",
+    "uploadTime": 637,
+    "pinSize": 546,
+    "timestamp": "2025-06-21T01:34:06.311Z",
+    "uploadedAt": "2025-06-21T01:34:07.268Z"
+  },
+  "nextSteps": [
+    "Generate DID:KEY using DIDKit",
+    "Create DID Document with IPFS CID in service field",
+    "Issue Verifiable Credentials",
+    "Implement wallet ownership verification"
+  ]
+}

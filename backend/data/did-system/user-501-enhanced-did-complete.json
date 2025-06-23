@@ -1,0 +1,266 @@
+{
+  "metadata": {
+    "userId": 501,
+    "investorId": "user-501",
+    "step": "Enhanced DID Generation Complete",
+    "version": "2.0.0",
+    "completedAt": "2025-06-22T20:14:14.911Z"
+  },
+  "did": {
+    "didKey": "did:key:zdPRhEkfr0bU6eAk4cYjDW-9g1ctCbT610vZrt8Mf4WA",
+    "privateKey": "74f4611247ebd1b53a7809387188c35bef60d5cb426d3eb5d2f66bb7c31fe160",
+    "didDocument": {
+      "@context": [
+        "https://www.w3.org/ns/did/v1",
+        "https://w3id.org/security/suites/ed25519-2020/v1"
+      ],
+      "id": "did:key:zdPRhEkfr0bU6eAk4cYjDW-9g1ctCbT610vZrt8Mf4WA",
+      "verificationMethod": [
+        {
+          "id": "did:key:zdPRhEkfr0bU6eAk4cYjDW-9g1ctCbT610vZrt8Mf4WA#key-1",
+          "type": "Ed25519VerificationKey2020",
+          "controller": "did:key:zdPRhEkfr0bU6eAk4cYjDW-9g1ctCbT610vZrt8Mf4WA",
+          "publicKeyMultibase": "zdPRhEkfr0bU6eAk4cYjDW-9g1ctCbT610vZrt8Mf4WA"
+        }
+      ],
+      "authentication": [
+        "did:key:zdPRhEkfr0bU6eAk4cYjDW-9g1ctCbT610vZrt8Mf4WA#key-1"
+      ],
+      "assertionMethod": [
+        "did:key:zdPRhEkfr0bU6eAk4cYjDW-9g1ctCbT610vZrt8Mf4WA#key-1"
+      ],
+      "service": [
+        {
+          "id": "did:key:zdPRhEkfr0bU6eAk4cYjDW-9g1ctCbT610vZrt8Mf4WA#multi-wallet-service",
+          "type": "MultiChainWalletService",
+          "serviceEndpoint": {
+            "ipfsCid": "bafkreigni3iul2juh6bxgva77t67dnez7ofhfwxjb46okcs4jboiga5loi",
+            "ipfsUrl": "https://gateway.pinata.cloud/ipfs/bafkreigni3iul2juh6bxgva77t67dnez7ofhfwxjb46okcs4jboiga5loi",
+            "purpose": "Multi-chain wallet ownership verification",
+            "walletCount": 3,
+            "supportedChains": [
+              "bitcoin",
+              "ethereum",
+              "solana"
+            ],
+            "combinedHash": "319161f2f7c6884590d8aa31075f8fd5c5e00ed276320f0fed72a057822ad628",
+            "verificationMethod": "multi-chain-wallet-ownership",
+            "format": "consolidated-wallet-json"
+          }
+        },
+        {
+          "id": "did:key:zdPRhEkfr0bU6eAk4cYjDW-9g1ctCbT610vZrt8Mf4WA#wallet-bitcoin",
+          "type": "CryptocurrencyWallet",
+          "serviceEndpoint": {
+            "parentService": "did:key:zdPRhEkfr0bU6eAk4cYjDW-9g1ctCbT610vZrt8Mf4WA#multi-wallet-service",
+            "chain": "bitcoin",
+            "network": "testnet",
+            "symbol": "BTC",
+            "address": "tb1qejlstxxvwf0a5lw74ud9ym6lgnwjsdd4uh6aat",
+            "addressHash": "75699d174e103670df8dfbafc6b1473a3b0dc8c8cf3906fe9e8e70b6345d2753",
+            "verificationPurpose": "individual-wallet-reference"
+          }
+        },
+        {
+          "id": "did:key:zdPRhEkfr0bU6eAk4cYjDW-9g1ctCbT610vZrt8Mf4WA#wallet-ethereum",
+          "type": "CryptocurrencyWallet",
+          "serviceEndpoint": {
+            "parentService": "did:key:zdPRhEkfr0bU6eAk4cYjDW-9g1ctCbT610vZrt8Mf4WA#multi-wallet-service",
+            "chain": "ethereum",
+            "network": "sepolia",
+            "symbol": "ETH",
+            "address": "0x10eE2Ecd4b90A75dDc7a38c5967cE0F63D315090",
+            "addressHash": "257272785c976387442da92a88f5e25c1ab752edb85fca47c0de001afcdf882b",
+            "verificationPurpose": "individual-wallet-reference"
+          }
+        },
+        {
+          "id": "did:key:zdPRhEkfr0bU6eAk4cYjDW-9g1ctCbT610vZrt8Mf4WA#wallet-solana",
+          "type": "CryptocurrencyWallet",
+          "serviceEndpoint": {
+            "parentService": "did:key:zdPRhEkfr0bU6eAk4cYjDW-9g1ctCbT610vZrt8Mf4WA#multi-wallet-service",
+            "chain": "solana",
+            "network": "devnet",
+            "symbol": "SOL",
+            "address": "12XFgHy3rHwhh96aMkn4DSivH1QoBgyVjxGv8LfawxnG",
+            "addressHash": "6795c5ff37a5a22d13c6abdf21132db15ee3f7bffd91b28cf8642257f0753be8",
+            "verificationPurpose": "individual-wallet-reference"
+          }
+        },
+        {
+          "id": "did:key:zdPRhEkfr0bU6eAk4cYjDW-9g1ctCbT610vZrt8Mf4WA#identity-verification",
+          "type": "IdentityVerification",
+          "serviceEndpoint": {
+            "purpose": "Multi-chain identity verification",
+            "walletDataSource": "https://gateway.pinata.cloud/ipfs/bafkreigni3iul2juh6bxgva77t67dnez7ofhfwxjb46okcs4jboiga5loi",
+            "verificationMethod": "ipfs-consolidated-wallet-verification",
+            "supportedChains": [
+              "bitcoin",
+              "ethereum",
+              "solana"
+            ],
+            "createdAt": "2025-06-22T20:14:01.147Z"
+          }
+        }
+      ],
+      "metadata": {
+        "userId": 501,
+        "investorId": "user-501",
+        "userInfo": {
+          "id": 501,
+          "name": "anaskp72",
+          "email": "anaskp72@gmail.com",
+          "vaultId": "44"
+        },
+        "createdAt": "2025-06-22T20:14:01.147Z",
+        "version": "2.0.0",
+        "walletCount": 3,
+        "consolidatedWalletIPFS": {
+          "cid": "bafkreigni3iul2juh6bxgva77t67dnez7ofhfwxjb46okcs4jboiga5loi",
+          "url": "https://gateway.pinata.cloud/ipfs/bafkreigni3iul2juh6bxgva77t67dnez7ofhfwxjb46okcs4jboiga5loi"
+        },
+        "txHash": null,
+        "etherscanUrl": null
+      }
+    },
+    "didDocumentCID": {
+      "cid": "bafkreiffwgavi5wlr5ujeefb5jarensvdgodaiyretqeik4qodllkwcaou",
+      "ipfsUrl": "https://gateway.pinata.cloud/ipfs/bafkreiffwgavi5wlr5ujeefb5jarensvdgodaiyretqeik4qodllkwcaou",
+      "uploadTime": 792,
+      "pinSize": 3460
+    }
+  },
+  "wallets": {
+    "addresses": {
+      "bitcoin": {
+        "address": "tb1qejlstxxvwf0a5lw74ud9ym6lgnwjsdd4uh6aat",
+        "assetId": "BTC_TEST",
+        "chain": "bitcoin",
+        "network": "testnet",
+        "name": "Bitcoin Testnet",
+        "symbol": "BTC",
+        "balance": 0,
+        "walletId": 17
+      },
+      "ethereum": {
+        "address": "0x10eE2Ecd4b90A75dDc7a38c5967cE0F63D315090",
+        "assetId": "ETH_TEST5",
+        "chain": "ethereum",
+        "network": "sepolia",
+        "name": "Ethereum Sepolia",
+        "symbol": "ETH",
+        "balance": 0,
+        "walletId": 18
+      },
+      "solana": {
+        "address": "12XFgHy3rHwhh96aMkn4DSivH1QoBgyVjxGv8LfawxnG",
+        "assetId": "SOL_TEST",
+        "chain": "solana",
+        "network": "devnet",
+        "name": "Solana Devnet",
+        "symbol": "SOL",
+        "balance": 0,
+        "walletId": 19
+      }
+    },
+    "consolidatedIPFS": {
+      "cid": "bafkreigni3iul2juh6bxgva77t67dnez7ofhfwxjb46okcs4jboiga5loi",
+      "ipfsUrl": "https://gateway.pinata.cloud/ipfs/bafkreigni3iul2juh6bxgva77t67dnez7ofhfwxjb46okcs4jboiga5loi",
+      "uploadTime": 2016,
+      "pinSize": 1595,
+      "walletData": {
+        "metadata": {
+          "userId": 501,
+          "investorId": "user-501",
+          "purpose": "Multi-chain wallet identity verification",
+          "version": "2.0.0",
+          "createdAt": "2025-06-22T20:13:59.109Z",
+          "walletCount": 3,
+          "chains": [
+            "bitcoin",
+            "ethereum",
+            "solana"
+          ],
+          "format": "W3C DID Service Entry"
+        },
+        "userInfo": {
+          "id": 501,
+          "name": "anaskp72",
+          "email": "anaskp72@gmail.com",
+          "vaultId": "44"
+        },
+        "wallets": {
+          "bitcoin": {
+            "walletId": 17,
+            "address": "tb1qejlstxxvwf0a5lw74ud9ym6lgnwjsdd4uh6aat",
+            "assetId": "BTC_TEST",
+            "chain": "bitcoin",
+            "network": "testnet",
+            "name": "Bitcoin Testnet",
+            "symbol": "BTC",
+            "balance": 0,
+            "addressHash": "75699d174e103670df8dfbafc6b1473a3b0dc8c8cf3906fe9e8e70b6345d2753"
+          },
+          "ethereum": {
+            "walletId": 18,
+            "address": "0x10eE2Ecd4b90A75dDc7a38c5967cE0F63D315090",
+            "assetId": "ETH_TEST5",
+            "chain": "ethereum",
+            "network": "sepolia",
+            "name": "Ethereum Sepolia",
+            "symbol": "ETH",
+            "balance": 0,
+            "addressHash": "257272785c976387442da92a88f5e25c1ab752edb85fca47c0de001afcdf882b"
+          },
+          "solana": {
+            "walletId": 19,
+            "address": "12XFgHy3rHwhh96aMkn4DSivH1QoBgyVjxGv8LfawxnG",
+            "assetId": "SOL_TEST",
+            "chain": "solana",
+            "network": "devnet",
+            "name": "Solana Devnet",
+            "symbol": "SOL",
+            "balance": 0,
+            "addressHash": "6795c5ff37a5a22d13c6abdf21132db15ee3f7bffd91b28cf8642257f0753be8"
+          }
+        },
+        "verification": {
+          "method": "multi-chain-wallet-ownership",
+          "hashAlgorithm": "sha256",
+          "combinedHash": "319161f2f7c6884590d8aa31075f8fd5c5e00ed276320f0fed72a057822ad628",
+          "combinedSource": "bitcoin:tb1qejlstxxvwf0a5lw74ud9ym6lgnwjsdd4uh6aat|ethereum:0x10eE2Ecd4b90A75dDc7a38c5967cE0F63D315090|solana:12XFgHy3rHwhh96aMkn4DSivH1QoBgyVjxGv8LfawxnG"
+        },
+        "capabilities": {
+          "signing": true,
+          "transactions": true,
+          "verification": true,
+          "multiChain": true
+        }
+      },
+      "walletCount": 3,
+      "chains": [
+        "bitcoin",
+        "ethereum",
+        "solana"
+      ],
+      "combinedHash": "319161f2f7c6884590d8aa31075f8fd5c5e00ed276320f0fed72a057822ad628"
+    }
+  },
+  "userInfo": {
+    "id": 501,
+    "name": "anaskp72",
+    "email": "anaskp72@gmail.com",
+    "vaultId": "44"
+  },
+  "summary": {
+    "totalWallets": 3,
+    "consolidatedWalletCID": "bafkreigni3iul2juh6bxgva77t67dnez7ofhfwxjb46okcs4jboiga5loi",
+    "didGenerated": true,
+    "didDocumentUploaded": true,
+    "chains": [
+      "bitcoin",
+      "ethereum",
+      "solana"
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "vcHash": "0x63bb6f624bb70b906fc7ef6f3dff1634a54bd033945d1c67f55322102e0eba7e",
+  "vcFile": "./data/vc-system/verifiable-credential-unsigned.json",
+  "issuer": "did:key:zYvS_9k24xPvas1ha8Na8WtK13TsRmspCkUbsik5ADWg",
+  "subject": "did:key:zYvS_9k24xPvas1ha8Na8WtK13TsRmspCkUbsik5ADWg",
+  "issuanceDate": "2025-06-23T00:29:36.174Z",
+  "expirationDate": "2026-06-23T00:29:36.174Z",
+  "kycStatus": "completed",
+  "wallets": {
+    "eth": "0x5d3FdB6e0D846A2A2F1D55D22E0f656152774208",
+    "btc": "tb1qle2fhacpp6vyphnpmm2e3g4cdf6vgm2ygca9lw",
+    "sol": "6ss7aAeidVpA1NBM6GaEqFLmaEEt9qSeYHwET8Sa6G98"
+  },
+  "createdAt": "2025-06-23T00:29:36.174Z",
+  "signedVCFile": "./data/vc-system/verifiable-credential-signed.json",
+  "signedVCHash": "0x58778dcc88b4e007c2ee09dad4070a0ac037636c091f4052049cc90386a10011",
+  "signedAt": "2025-06-23T00:29:36.194Z",
+  "proofType": "Ed25519Signature2020",
+  "verificationMethod": "did:key:zYvS_9k24xPvas1ha8Na8WtK13TsRmspCkUbsik5ADWg#zYvS_9k24xPvas1ha8Na8WtK13TsRmspCkUbsik5ADWg",
+  "vcSize": 4001,
+  "vcCID": "bafkreiechpt64ohkvmfbsd4pbtio2xipvy2ffatxhugodn3svmb6fo4bdy",
+  "vcIPFSUrl": "https://gateway.pinata.cloud/ipfs/bafkreiechpt64ohkvmfbsd4pbtio2xipvy2ffatxhugodn3svmb6fo4bdy",
+  "vcIPFSUri": "ipfs://bafkreiechpt64ohkvmfbsd4pbtio2xipvy2ffatxhugodn3svmb6fo4bdy",
+  "uploadedAt": "2025-06-23T00:30:49.350Z",
+  "pinataResponse": {
+    "ipfsHash": "bafkreiechpt64ohkvmfbsd4pbtio2xipvy2ffatxhugodn3svmb6fo4bdy",
+    "pinSize": 4361,
+    "timestamp": "2025-06-23T00:30:47.617Z"
+  }
+}
