@@ -14,6 +14,7 @@ Blockchain-based identity and asset tokenization platform with KYC, SBT minting,
    ```bash
    cd backend
    npm install
+   # Configure your .env file with database and API keys
    npm run dev
    ```
 
@@ -21,6 +22,8 @@ Blockchain-based identity and asset tokenization platform with KYC, SBT minting,
    ```bash
    cd copym-beta-app
    npm install
+   # Copy .env.example to .env (optional - has good defaults)
+   cp .env.example .env
    npm run dev
    ```
 
@@ -32,15 +35,18 @@ Blockchain-based identity and asset tokenization platform with KYC, SBT minting,
    ```
 
 ### Production Deployment 🌐
-**Super Simple**: Just set `NODE_ENV=production` in your `.env` file!
+**Super Simple**: Environment detection is automatic!
+
+**Backend**: Set `NODE_ENV=production` in your `.env` file
+**Frontend**: Vite automatically detects build mode (`npm run build` = production)
 
 ```bash
-# In your .env file, change:
+# Backend .env file:
 NODE_ENV=production
 
-# The app automatically detects production and uses:
-# Frontend: https://issuer.copym.xyz
-# Backend: https://api.copym.xyz
+# Frontend automatically uses:
+# Development: http://localhost:5000
+# Production: https://api.copym.xyz
 # Fallback: http://139.59.29.69:5000
 ```
 
@@ -49,7 +55,7 @@ NODE_ENV=production
 # Backend
 cd backend && NODE_ENV=production npm start
 
-# Frontend  
+# Frontend (automatically detects production mode)
 cd copym-beta-app && npm run build
 ```
 
