@@ -39,4 +39,4 @@ artifacts/
 
 # Coverage
 coverage/
-.nyc_output/ 
+.nyc_output/ backend/.env
