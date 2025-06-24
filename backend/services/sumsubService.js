@@ -9,7 +9,7 @@ const prisma = new PrismaClient();
  * Complete Sumsub Service - Integrated with your project
  * Handles KYC verification, webhook processing, and database integration
  */
-export class SumsubService {
+export default class SumsubService {
     constructor(config = {}) {
         this.appToken = config.appToken || process.env.SUMSUB_APP_TOKEN;
         this.secretKey = config.secretKey || process.env.SUMSUB_SECRET_KEY;

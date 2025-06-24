@@ -1,0 +1,276 @@
+/* Client & Leads Management */
+
+.client-leads-management {
+    padding: 0;
+    background: #f8f9fa;
+}
+
+
+/* Page Header */
+
+.page-header {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 24px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.page-title {
+    color: #2c3e50 !important;
+    font-weight: 700 !important;
+    font-size: 2rem !important;
+    margin-bottom: 8px !important;
+}
+
+.page-subtitle {
+    color: #6c757d !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+}
+
+
+/* Stats Cards */
+
+.stats-card {
+    border-radius: 8px !important;
+    border: 1px solid #e0e0e0 !important;
+    background: #ffffff !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.stats-card:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.stats-value {
+    font-weight: 700 !important;
+    color: #2c3e50 !important;
+    font-size: 1.8rem !important;
+}
+
+.stats-label {
+    color: #6c757d !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+}
+
+
+/* Main Card */
+
+.main-card {
+    border-radius: 8px !important;
+    border: 1px solid #e0e0e0 !important;
+    background: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+
+/* Custom Tabs */
+
+.custom-tabs .MuiTab-root {
+    font-weight: 600 !important;
+    color: #6c757d !important;
+    text-transform: none !important;
+    font-size: 1rem !important;
+}
+
+.custom-tabs .MuiTab-root.Mui-selected {
+    color: #2c3e50 !important;
+}
+
+.custom-tabs .MuiTabs-indicator {
+    background: #3498db !important;
+    height: 3px !important;
+}
+
+
+/* Data Table */
+
+.data-table {
+    border-radius: 8px !important;
+    border: 1px solid #e0e0e0 !important;
+    box-shadow: none !important;
+}
+
+.data-table .MuiTableHead-root {
+    background: #f8f9fa !important;
+}
+
+.data-table .MuiTableHead-root .MuiTableCell-root {
+    color: #2c3e50 !important;
+    font-weight: 700 !important;
+    font-size: 0.9rem !important;
+    border-bottom: 2px solid #e0e0e0 !important;
+    padding: 16px !important;
+}
+
+.data-table .MuiTableBody-root .MuiTableCell-root {
+    color: #495057 !important;
+    font-size: 0.875rem !important;
+    padding: 12px 16px !important;
+    border-bottom: 1px solid #f1f3f4 !important;
+}
+
+.table-row {
+    transition: all 0.3s ease !important;
+}
+
+.table-row:hover {
+    background: #f8f9fa !important;
+}
+
+
+/* Search Field */
+
+.MuiTextField-root .MuiOutlinedInput-root {
+    border-radius: 6px !important;
+}
+
+.MuiTextField-root .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+    border-color: #e0e0e0 !important;
+}
+
+.MuiTextField-root .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: #3498db !important;
+}
+
+.MuiTextField-root .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #3498db !important;
+}
+
+
+/* Action Buttons */
+
+.MuiButton-contained {
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+    text-transform: none !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease !important;
+}
+
+.MuiButton-contained:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+
+/* Status Chips */
+
+.MuiChip-root {
+    border-radius: 4px !important;
+    font-weight: 600 !important;
+    font-size: 0.75rem !important;
+}
+
+
+/* Avatar Styling */
+
+.MuiAvatar-root {
+    font-weight: 600 !important;
+    font-size: 0.875rem !important;
+}
+
+
+/* Menu Styling */
+
+.MuiMenu-paper {
+    border-radius: 8px !important;
+    border: 1px solid #e0e0e0 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.MuiMenuItem-root {
+    color: #495057 !important;
+    font-size: 0.875rem !important;
+    padding: 8px 16px !important;
+}
+
+.MuiMenuItem-root:hover {
+    background: #f8f9fa !important;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 960px) {
+    .page-title {
+        font-size: 1.6rem !important;
+    }
+    .page-header {
+        padding: 20px;
+    }
+    .stats-value {
+        font-size: 1.5rem !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .page-title {
+        font-size: 1.4rem !important;
+    }
+    .page-header {
+        padding: 16px;
+    }
+    .stats-value {
+        font-size: 1.3rem !important;
+    }
+    .data-table .MuiTableCell-root {
+        padding: 8px !important;
+        font-size: 0.8rem !important;
+    }
+}
+
+
+/* Contact Information Styling */
+
+.data-table .MuiTableCell-root .MuiTypography-caption {
+    font-size: 0.75rem !important;
+    color: #6c757d !important;
+}
+
+
+/* Icon Styling */
+
+.MuiSvgIcon-root {
+    color: #6c757d !important;
+}
+
+
+/* Table Row Hover Effect */
+
+.table-row:hover .MuiAvatar-root {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+
+/* Status Color Variants */
+
+.status-active {
+    background: rgba(67, 233, 123, 0.1) !important;
+    color: #43e97b !important;
+}
+
+.status-inactive {
+    background: rgba(108, 117, 125, 0.1) !important;
+    color: #6c757d !important;
+}
+
+.status-hot {
+    background: rgba(245, 87, 108, 0.1) !important;
+    color: #f5576c !important;
+}
+
+.status-warm {
+    background: rgba(240, 147, 251, 0.1) !important;
+    color: #f093fb !important;
+}
+
+.status-cold {
+    background: rgba(79, 172, 254, 0.1) !important;
+    color: #4facfe !important;
+}

@@ -1,0 +1,192 @@
+/* Dashboard Container */
+
+.dashboard-container {
+    background: #f8f9fa;
+    min-height: 100vh;
+}
+
+
+/* Sidebar Styles */
+
+.dashboard-sidebar {
+    height: 100%;
+    padding: 0;
+    background: #2c3e50;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Sidebar Header */
+
+.sidebar-header {
+    padding: 24px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    font-size: 24px;
+    color: #3498db;
+    font-weight: bold;
+}
+
+.logo-text {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    font-size: 18px !important;
+}
+
+
+/* Sidebar Divider */
+
+.sidebar-divider {
+    background: rgba(255, 255, 255, 0.1) !important;
+    height: 1px !important;
+    margin: 0 !important;
+}
+
+
+/* Sidebar Menu */
+
+.sidebar-menu {
+    padding: 16px 12px !important;
+    position: relative;
+    z-index: 1;
+}
+
+.menu-item {
+    margin-bottom: 4px !important;
+}
+
+.menu-button {
+    border-radius: 6px !important;
+    padding: 12px 16px !important;
+    transition: all 0.3s ease !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-button:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.menu-button.active {
+    background: rgba(52, 152, 219, 0.2) !important;
+    border-left: 3px solid #3498db !important;
+}
+
+.menu-icon {
+    color: rgba(255, 255, 255, 0.7) !important;
+    min-width: 40px !important;
+    transition: all 0.3s ease !important;
+}
+
+.menu-button.active .menu-icon {
+    color: #3498db !important;
+}
+
+.menu-text .MuiListItemText-primary {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    transition: all 0.3s ease !important;
+}
+
+.menu-button.active .menu-text .MuiListItemText-primary {
+    color: #3498db !important;
+    font-weight: 600 !important;
+}
+
+
+/* App Bar */
+
+.dashboard-appbar {
+    background: #ffffff !important;
+    color: #2c3e50 !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.appbar-toolbar {
+    padding: 0 24px !important;
+    min-height: 64px !important;
+}
+
+.appbar-toolbar .MuiTypography-h6 {
+    color: #2c3e50 !important;
+    font-weight: 600 !important;
+}
+
+.appbar-toolbar .MuiIconButton-root {
+    color: #6c757d !important;
+}
+
+.appbar-toolbar .MuiAvatar-root {
+    background: #3498db !important;
+}
+
+
+/* Main Content */
+
+.dashboard-main {
+    position: relative;
+    background: #f8f9fa;
+}
+
+.dashboard-content {
+    position: relative;
+    z-index: 1;
+    background: transparent;
+    padding: 24px;
+    margin: 0;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+    .sidebar-header {
+        padding: 16px;
+    }
+    .logo-text {
+        font-size: 16px !important;
+    }
+    .sidebar-menu {
+        padding: 12px 8px !important;
+    }
+    .menu-button {
+        padding: 10px 12px !important;
+    }
+    .dashboard-content {
+        padding: 16px;
+    }
+}
+
+
+/* Scrollbar Styling */
+
+.dashboard-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.dashboard-sidebar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+}
+
+.dashboard-sidebar::-webkit-scrollbar-thumb {
+    background: #3498db;
+    border-radius: 3px;
+}
+
+.dashboard-sidebar::-webkit-scrollbar-thumb:hover {
+    background: #2980b9;
+}

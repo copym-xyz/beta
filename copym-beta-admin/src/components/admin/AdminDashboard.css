@@ -1,0 +1,235 @@
+/* Admin Dashboard Container */
+
+.admin-dashboard {
+    padding: 0;
+    background: #f8f9fa;
+}
+
+
+/* Dashboard Header */
+
+.dashboard-header {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 24px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.welcome-title {
+    color: #2c3e50 !important;
+    font-weight: 700 !important;
+    font-size: 2.2rem !important;
+    margin-bottom: 8px !important;
+    position: relative;
+    z-index: 1;
+}
+
+.welcome-subtitle {
+    color: #6c757d !important;
+    font-size: 1.1rem !important;
+    font-weight: 400 !important;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Stats Cards */
+
+.stats-card {
+    border-radius: 8px !important;
+    border: 1px solid #e0e0e0 !important;
+    background: #ffffff !important;
+    transition: all 0.3s ease !important;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.stats-card:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.stats-value {
+    font-weight: 700 !important;
+    color: #2c3e50 !important;
+    font-size: 2rem !important;
+}
+
+.stats-label {
+    color: #6c757d !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+}
+
+
+/* Performance Card */
+
+.performance-card {
+    border-radius: 8px !important;
+    background: #ffffff !important;
+    border: 1px solid #e0e0e0 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.section-title {
+    font-weight: 700 !important;
+    color: #2c3e50 !important;
+    font-size: 1.4rem !important;
+}
+
+.metric-item {
+    padding: 16px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.metric-item:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.metric-label {
+    font-weight: 600 !important;
+    color: #495057 !important;
+    font-size: 0.9rem !important;
+}
+
+.metric-value {
+    font-weight: 700 !important;
+    color: #2c3e50 !important;
+    font-size: 1rem !important;
+}
+
+
+/* Activities Card */
+
+.activities-card {
+    border-radius: 8px !important;
+    background: #ffffff !important;
+    border: 1px solid #e0e0e0 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    height: fit-content;
+}
+
+.activities-list {
+    padding: 0 !important;
+}
+
+.activity-item {
+    padding: 12px 0 !important;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    margin: 4px 0;
+}
+
+.activity-item:hover {
+    background: #f8f9fa !important;
+    transform: translateX(2px);
+}
+
+.activity-time {
+    color: #6c757d !important;
+    font-weight: 500 !important;
+    margin-top: 4px !important;
+    display: block !important;
+    font-size: 0.8rem !important;
+}
+
+
+/* Quick Actions Card */
+
+.quick-actions-card {
+    border-radius: 8px !important;
+    background: #ffffff !important;
+    border: 1px solid #e0e0e0 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.action-button {
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+    text-transform: none !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.action-button:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+
+/* Remove complex animations for classic look */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Remove stagger animations for classic look */
+
+.admin-dashboard {
+    animation: fadeInUp 0.4s ease-out;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 960px) {
+    .welcome-title {
+        font-size: 1.8rem !important;
+    }
+    .welcome-subtitle {
+        font-size: 1rem !important;
+    }
+    .dashboard-header {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .welcome-title {
+        font-size: 1.6rem !important;
+    }
+    .stats-value {
+        font-size: 1.6rem !important;
+    }
+    .dashboard-header {
+        padding: 16px;
+    }
+    .action-button {
+        font-size: 0.875rem !important;
+    }
+}
+
+
+/* Enhanced text visibility */
+
+.MuiTypography-root {
+    color: #2c3e50 !important;
+}
+
+.MuiListItemText-primary {
+    color: #2c3e50 !important;
+    font-weight: 600 !important;
+}
+
+.MuiListItemText-secondary {
+    color: #6c757d !important;
+}
